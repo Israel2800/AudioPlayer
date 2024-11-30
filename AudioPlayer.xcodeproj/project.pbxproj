@@ -13,6 +13,11 @@
 		C6C987EF2CFA896D00E09A0C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C6C987EE2CFA896D00E09A0C /* Base */; };
 		C6C987F12CFA896F00E09A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C987F02CFA896F00E09A0C /* Assets.xcassets */; };
 		C6C987F42CFA896F00E09A0C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C6C987F32CFA896F00E09A0C /* Base */; };
+		C6C987FD2CFA89BE00E09A0C /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C987FC2CFA89BE00E09A0C /* AVKit.framework */; };
+		C6C987FF2CFA89CD00E09A0C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C987FE2CFA89CD00E09A0C /* AVFoundation.framework */; };
+		C6C988012CFA8E5B00E09A0C /* MUSIC3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C6C988002CFA8E5B00E09A0C /* MUSIC3.mp3 */; };
+		C6C988032CFAA63500E09A0C /* Reproductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C988022CFAA63500E09A0C /* Reproductor.swift */; };
+		C6C988062CFAB07900E09A0C /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = C6C988052CFAB07900E09A0C /* YouTubeiOSPlayerHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		C6C987F02CFA896F00E09A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C987F32CFA896F00E09A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6C987F52CFA896F00E09A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C987FC2CFA89BE00E09A0C /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C6C987FE2CFA89CD00E09A0C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C6C988002CFA8E5B00E09A0C /* MUSIC3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MUSIC3.mp3; sourceTree = "<group>"; };
+		C6C988022CFAA63500E09A0C /* Reproductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reproductor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C987FF2CFA89CD00E09A0C /* AVFoundation.framework in Frameworks */,
+				C6C987FD2CFA89BE00E09A0C /* AVKit.framework in Frameworks */,
+				C6C988062CFAB07900E09A0C /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,7 @@
 			children = (
 				C6C987E62CFA896D00E09A0C /* AudioPlayer */,
 				C6C987E52CFA896D00E09A0C /* Products */,
+				C6C987FB2CFA89BE00E09A0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +69,7 @@
 		C6C987E62CFA896D00E09A0C /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				C6C988002CFA8E5B00E09A0C /* MUSIC3.mp3 */,
 				C6C987E72CFA896D00E09A0C /* AppDelegate.swift */,
 				C6C987E92CFA896D00E09A0C /* SceneDelegate.swift */,
 				C6C987EB2CFA896D00E09A0C /* ViewController.swift */,
@@ -63,8 +77,18 @@
 				C6C987F02CFA896F00E09A0C /* Assets.xcassets */,
 				C6C987F22CFA896F00E09A0C /* LaunchScreen.storyboard */,
 				C6C987F52CFA896F00E09A0C /* Info.plist */,
+				C6C988022CFAA63500E09A0C /* Reproductor.swift */,
 			);
 			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		C6C987FB2CFA89BE00E09A0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6C987FE2CFA89CD00E09A0C /* AVFoundation.framework */,
+				C6C987FC2CFA89BE00E09A0C /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = AudioPlayer;
+			packageProductDependencies = (
+				C6C988052CFAB07900E09A0C /* YouTubeiOSPlayerHelper */,
+			);
 			productName = AudioPlayer;
 			productReference = C6C987E42CFA896D00E09A0C /* AudioPlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = C6C987DB2CFA896D00E09A0C;
+			packageReferences = (
+				C6C988042CFAB07900E09A0C /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = C6C987E52CFA896D00E09A0C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C988012CFA8E5B00E09A0C /* MUSIC3.mp3 in Resources */,
 				C6C987F12CFA896F00E09A0C /* Assets.xcassets in Resources */,
 				C6C987F42CFA896F00E09A0C /* Base in Resources */,
 				C6C987EF2CFA896D00E09A0C /* Base in Resources */,
@@ -139,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6C987EC2CFA896D00E09A0C /* ViewController.swift in Sources */,
+				C6C988032CFAA63500E09A0C /* Reproductor.swift in Sources */,
 				C6C987E82CFA896D00E09A0C /* AppDelegate.swift in Sources */,
 				C6C987EA2CFA896D00E09A0C /* SceneDelegate.swift in Sources */,
 			);
@@ -295,6 +327,7 @@
 				DEVELOPMENT_TEAM = UMHY4G42PY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AudioPlayer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,9 +340,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.israelaguilar-ddadm12.AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +360,7 @@
 				DEVELOPMENT_TEAM = UMHY4G42PY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AudioPlayer;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,9 +373,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.israelaguilar-ddadm12.AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +405,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6C988042CFAB07900E09A0C /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6C988052CFAB07900E09A0C /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6C988042CFAB07900E09A0C /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6C987DC2CFA896D00E09A0C /* Project object */;
 }
